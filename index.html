@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-TW" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Peak Formula | 高階身心能量調校系統</title>
-    <!-- Tailwind CSS CDN -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet"
+    >
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif'],
+                        sans: [
+                            '"Plus Jakarta Sans"',
+                            '"Noto Sans TC"',
+                            'sans-serif'
+                        ],
                     },
+
                     colors: {
                         brand: {
                             50: '#f0f7ff',
@@ -29,310 +42,1665 @@
                             950: '#030712',
                         }
                     },
+
                     animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow':
+                            'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+
+                        'float':
+                            'float 6s ease-in-out infinite',
                     },
+
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                            '0%, 100%': {
+                                transform: 'translateY(0px)'
+                            },
+
+                            '50%': {
+                                transform: 'translateY(-10px)'
+                            },
                         }
                     }
                 }
             }
         }
     </script>
+
     <style>
-        /* 背景漸變與玻璃質感 */
+        /* 背景漸變 */
         .bg-gradient-main {
-            background: linear-gradient(180deg, #070e23 0%, #030712 50%, #000000 100%);
+            background:
+                linear-gradient(
+                    180deg,
+                    #070e23 0%,
+                    #030712 50%,
+                    #000000 100%
+                );
         }
+
+        /* 玻璃卡片 */
         .glass-card {
             background: rgba(15, 23, 42, 0.55);
+
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(59, 130, 246, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+            border:
+                1px solid rgba(59, 130, 246, 0.15);
+
+            box-shadow:
+                0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
+
         .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.3);
+            border-color:
+                rgba(56, 189, 248, 0.4);
+
+            box-shadow:
+                0 0 25px -5px rgba(59, 130, 246, 0.3);
         }
+
+        /* 主標題漸層 */
         .text-gradient {
-            background: linear-gradient(135deg, #ffffff 30%, #60a5fa 70%, #38bdf8 100%);
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 30%,
+                    #60a5fa 70%,
+                    #38bdf8 100%
+                );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .text-gradient-accent {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* 呼吸引導動畫模擬 */
+
+        /* 呼吸動畫光暈 */
         .breath-ring {
-            box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
+            box-shadow:
+                0 0 50px rgba(56, 189, 248, 0.25);
         }
     </style>
 </head>
-<body class="bg-black text-slate-200 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- 背景光暈特效 -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-blue-600/20 via-sky-500/10 to-transparent blur-[120px] rounded-full"></div>
-        <div class="absolute top-1/3 -left-40 w-[600px] h-[600px] bg-indigo-900/15 blur-[140px] rounded-full"></div>
-        <div class="absolute bottom-1/4 -right-40 w-[600px] h-[600px] bg-blue-900/10 blur-[140px] rounded-full"></div>
+
+<body
+    class="
+        bg-black
+        text-slate-200
+        font-sans
+        antialiased
+        selection:bg-blue-600
+        selection:text-white
+    "
+>
+
+    <!-- 背景光暈 -->
+    <div
+        class="
+            fixed
+            inset-0
+            pointer-events-none
+            overflow-hidden
+            z-0
+        "
+    >
+
+        <div
+            class="
+                absolute
+                -top-40
+                left-1/2
+                -translate-x-1/2
+                w-[1000px]
+                h-[600px]
+                bg-gradient-to-b
+                from-blue-600/20
+                via-sky-500/10
+                to-transparent
+                blur-[120px]
+                rounded-full
+            "
+        ></div>
+
+        <div
+            class="
+                absolute
+                top-1/3
+                -left-40
+                w-[600px]
+                h-[600px]
+                bg-indigo-900/15
+                blur-[140px]
+                rounded-full
+            "
+        ></div>
+
+        <div
+            class="
+                absolute
+                bottom-1/4
+                -right-40
+                w-[600px]
+                h-[600px]
+                bg-blue-900/10
+                blur-[140px]
+                rounded-full
+            "
+        ></div>
+
     </div>
 
-    <!-- 主頁面包覆層 (漸變背景) -->
-    <div class="relative z-10 bg-gradient-main min-h-screen">
+
+    <!-- 主頁面 -->
+    <div
+        class="
+            relative
+            z-10
+            bg-gradient-main
+            min-h-screen
+        "
+    >
 
         <!-- 導覽列 -->
-        <nav class="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-slate-800/60">
-            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-sky-400 p-[1.5px]">
-                        <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
-                            <i data-lucide="waves" class="w-5 h-5 text-sky-400"></i>
+        <nav
+            class="
+                sticky
+                top-0
+                z-50
+                backdrop-blur-md
+                bg-black/40
+                border-b
+                border-slate-800/60
+            "
+        >
+
+            <div
+                class="
+                    max-w-7xl
+                    mx-auto
+                    px-6
+                    h-20
+                    flex
+                    items-center
+                    justify-between
+                "
+            >
+
+                <!-- Logo -->
+                <a
+                    href="#"
+                    class="
+                        flex
+                        items-center
+                        gap-3
+                    "
+                >
+
+                    <div
+                        class="
+                            w-9
+                            h-9
+                            rounded-full
+                            bg-gradient-to-tr
+                            from-blue-600
+                            to-sky-400
+                            p-[1.5px]
+                        "
+                    >
+
+                        <div
+                            class="
+                                w-full
+                                h-full
+                                bg-slate-950
+                                rounded-full
+                                flex
+                                items-center
+                                justify-center
+                            "
+                        >
+
+                            <i
+                                data-lucide="waves"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-400
+                                "
+                            ></i>
+
                         </div>
+
                     </div>
-                    <span class="text-xl font-bold tracking-wider text-white">PEAK FORMULA</span>
-                </div>
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                    <a href="#features" class="hover:text-sky-400 transition-colors">核心系統</a>
-                    <a href="#scenarios" class="hover:text-sky-400 transition-colors">使用場景</a>
-                    <a href="#science" class="hover:text-sky-400 transition-colors">生物算力</a>
-                </div>
-                <a href="#download" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 transition-all shadow-lg shadow-blue-500/20">
-                    下載系統
+
+                    <span
+                        class="
+                            text-xl
+                            font-bold
+                            tracking-wider
+                            text-white
+                        "
+                    >
+                        PEAK FORMULA
+                    </span>
+
                 </a>
+
+
+                <!-- 導覽選單 -->
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-6
+                        md:gap-8
+                        text-sm
+                        font-medium
+                        text-slate-400
+                    "
+                >
+
+                    <a
+                        href="#features"
+                        class="
+                            hover:text-sky-400
+                            transition-colors
+                        "
+                    >
+                        核心系統
+                    </a>
+
+                    <a
+                        href="#scenarios"
+                        class="
+                            hover:text-sky-400
+                            transition-colors
+                        "
+                    >
+                        使用場景
+                    </a>
+
+                </div>
+
             </div>
+
         </nav>
 
-        <!-- Hero 區塊 -->
-        <section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6">
-            <div class="max-w-5xl mx-auto text-center space-y-8">
-                
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs text-sky-300 font-medium tracking-wide">
-                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+
+        <!-- HERO -->
+        <section
+            class="
+                relative
+                pt-24
+                pb-20
+                md:pt-32
+                md:pb-32
+                px-6
+            "
+        >
+
+            <div
+                class="
+                    max-w-5xl
+                    mx-auto
+                    text-center
+                    space-y-8
+                "
+            >
+
+                <div
+                    class="
+                        inline-flex
+                        items-center
+                        gap-2
+                        px-4
+                        py-2
+                        rounded-full
+                        glass-card
+                        text-xs
+                        text-sky-300
+                        font-medium
+                        tracking-wide
+                    "
+                >
+
+                    <span
+                        class="
+                            relative
+                            flex
+                            w-2
+                            h-2
+                        "
+                    >
+
+                        <span
+                            class="
+                                absolute
+                                inline-flex
+                                h-full
+                                w-full
+                                rounded-full
+                                bg-sky-400
+                                opacity-75
+                                animate-ping
+                            "
+                        ></span>
+
+                        <span
+                            class="
+                                relative
+                                inline-flex
+                                rounded-full
+                                w-2
+                                h-2
+                                bg-sky-400
+                            "
+                        ></span>
+
+                    </span>
+
                     生物頻率調音師 · 隨身攜帶
+
                 </div>
 
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    找回呼吸的韻律，<br class="hidden sm:inline"/>
-                    就找回<span class="text-gradient">生活的步調。</span>。
+
+                <h1
+                    class="
+                        text-4xl
+                        md:text-6xl
+                        lg:text-7xl
+                        font-extrabold
+                        tracking-tight
+                        text-white
+                        leading-tight
+                    "
+                >
+                    掌控呼吸的節奏，
+
+                    <br class="hidden sm:inline">
+
+                    就掌控了
+
+                    <span class="text-gradient">
+                        人生的狀態
+                    </span>。
                 </h1>
 
-                <p class="max-w-2xl mx-auto text-slate-400 text-base md:text-lg leading-relaxed">
-                    給追求極致表現、也懂得好好休息的你——<strong class="text-slate-200 font-normal">Peak Formula</strong> 不只是一款應用程式，而是專屬於你的高階身心能量調校系統。在壓力來臨前，先為心靈留白。
+
+                <p
+                    class="
+                        max-w-2xl
+                        mx-auto
+                        text-slate-400
+                        text-base
+                        md:text-lg
+                        leading-relaxed
+                    "
+                >
+                    給追求極致表現、也懂得好好休息的你——
+
+                    <strong
+                        class="
+                            text-slate-200
+                            font-normal
+                        "
+                    >
+                        Peak Formula
+                    </strong>
+
+                    不只是一款應用程式，而是專屬於你的高階身心能量調校系統。
+                    在壓力來臨前，先為心靈留白。
                 </p>
 
-                <!-- 動態呼吸光輪意象 -->
-                <div class="pt-8 pb-4 flex justify-center">
-                    <div class="relative w-44 h-44 rounded-full border border-sky-500/30 flex items-center justify-center breath-ring animate-pulse-slow">
-                        <div class="w-32 h-32 rounded-full border border-blue-400/40 flex items-center justify-center bg-blue-950/20 backdrop-blur-md">
-                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-sky-400/30 to-blue-600/30 flex items-center justify-center animate-float">
-                                <i data-lucide="wind" class="w-8 h-8 text-sky-300"></i>
+
+                <!-- 呼吸光輪 -->
+                <div
+                    class="
+                        pt-8
+                        pb-4
+                        flex
+                        justify-center
+                    "
+                >
+
+                    <div
+                        class="
+                            relative
+                            w-44
+                            h-44
+                            rounded-full
+                            border
+                            border-sky-500/30
+                            flex
+                            items-center
+                            justify-center
+                            breath-ring
+                            animate-pulse-slow
+                        "
+                    >
+
+                        <div
+                            class="
+                                w-32
+                                h-32
+                                rounded-full
+                                border
+                                border-blue-400/40
+                                flex
+                                items-center
+                                justify-center
+                                bg-blue-950/20
+                                backdrop-blur-md
+                            "
+                        >
+
+                            <div
+                                class="
+                                    w-20
+                                    h-20
+                                    rounded-full
+                                    bg-gradient-to-br
+                                    from-sky-400/30
+                                    to-blue-600/30
+                                    flex
+                                    items-center
+                                    justify-center
+                                    animate-float
+                                "
+                            >
+
+                                <i
+                                    data-lucide="wind"
+                                    class="
+                                        w-8
+                                        h-8
+                                        text-sky-300
+                                    "
+                                ></i>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <button class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-sm text-black bg-white hover:bg-slate-200 transition-all shadow-xl">
-                        開啓身心調校
-                    </button>
-                    <button class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-sm text-slate-300 glass-card hover:bg-slate-800/80 transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="play" class="w-4 h-4 text-sky-400"></i> 探索運算機制
-                    </button>
-                </div>
             </div>
+
         </section>
+
 
         <!-- 三大核心系統 -->
-        <section id="features" class="py-20 px-6 max-w-7xl mx-auto">
-            <div class="text-center space-y-4 mb-16">
-                <h2 class="text-xs uppercase tracking-widest text-sky-400 font-semibold">Core Architecture</h2>
-                <p class="text-3xl md:text-4xl font-bold text-white">三大科學演算架構</p>
-            </div>
+        <section
+            id="features"
+            class="
+                py-20
+                px-6
+                max-w-7xl
+                mx-auto
+            "
+        >
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- 卡片 1 -->
-                <div class="glass-card rounded-3xl p-8 space-y-6 transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                        <i data-lucide="activity" class="w-6 h-6 text-sky-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">高能動態</h3>
-                    <p class="text-xs text-sky-400 font-medium">數據導向的體能與修復</p>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
-                            <span><strong>即時訓練計時：</strong>Live Activity 功能精準掌握最佳訓練節奏與高效模式。</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
-                            <span><strong>運動後黃金修復：</strong>無縫同步 Apple Watch 數據，分析 Zone 1-5 心率，自動執行動態呼吸引導。</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
-                            <span><strong>臉部 AI 疲勞感知：</strong>獨家 Face 感測捕捉面部表情密碼（焦慮、疲憊），解鎖專屬呼吸法。</span>
-                        </li>
-                    </ul>
-                </div>
+            <div
+                class="
+                    text-center
+                    space-y-4
+                    mb-16
+                "
+            >
 
-                <!-- 卡片 2 -->
-                <div class="glass-card rounded-3xl p-8 space-y-6 transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
-                        <i data-lucide="moon" class="w-6 h-6 text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">數位微醺</h3>
-                    <p class="text-xs text-indigo-400 font-medium">打破焦慮的大腦關機儀式</p>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
-                            <span><strong>Whisky 微醺入睡法：</strong>科學呼吸法強效將交感神經切換為副交感神經，享受無負擔數位調酒。</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
-                            <span><strong>36 張夢境牌卡儀式：</strong>睡前抽取夢境牌，利用非邏輯靜態畫面打碎焦慮迴路，順利入睡。</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
-                            <span><strong>沉浸式 ASMR & Hz 聲學：</strong>自訂均衡器結合 3D 森林雨聲與深海音效，建立聲音物理結界。</span>
-                        </li>
-                    </ul>
-                </div>
+                <h2
+                    class="
+                        text-xs
+                        uppercase
+                        tracking-widest
+                        text-sky-400
+                        font-semibold
+                    "
+                >
+                    Core Architecture
+                </h2>
 
-                <!-- 卡片 3 -->
-                <div class="glass-card rounded-3xl p-8 space-y-6 transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
-                        <i data-lucide="sparkles" class="w-6 h-6 text-sky-300"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">靈性頻率</h3>
-                    <p class="text-xs text-sky-300 font-medium">意識對齊與日常冥想</p>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-300 shrink-0 mt-0.5"></i>
-                            <span><strong>朝聖祈禱系統：</strong>融合古老玄學智慧於演算，顯化最契合當下能量場的神聖祈禱文。</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-300 shrink-0 mt-0.5"></i>
-                            <span><strong>主題式引導冥想：</strong>涵蓋減壓、專注與療癒音訊課程，讓冥想成為每天最期待的自我對話。</span>
-                        </li>
-                    </ul>
-                </div>
+                <p
+                    class="
+                        text-3xl
+                        md:text-4xl
+                        font-bold
+                        text-white
+                    "
+                >
+                    三大科學演算架構
+                </p>
 
             </div>
+
+
+            <div
+                class="
+                    grid
+                    grid-cols-1
+                    md:grid-cols-3
+                    gap-8
+                "
+            >
+
+                <!-- 高能動態 -->
+                <div
+                    class="
+                        glass-card
+                        rounded-3xl
+                        p-8
+                        space-y-6
+                        transition-all
+                        duration-300
+                    "
+                >
+
+                    <div
+                        class="
+                            w-12
+                            h-12
+                            rounded-2xl
+                            bg-blue-500/10
+                            border
+                            border-blue-500/20
+                            flex
+                            items-center
+                            justify-center
+                        "
+                    >
+
+                        <i
+                            data-lucide="activity"
+                            class="
+                                w-6
+                                h-6
+                                text-sky-400
+                            "
+                        ></i>
+
+                    </div>
+
+
+                    <h3
+                        class="
+                            text-xl
+                            font-bold
+                            text-white
+                        "
+                    >
+                        高能動態
+                    </h3>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-sky-400
+                            font-medium
+                        "
+                    >
+                        數據導向的體能與修復
+                    </p>
+
+
+                    <ul
+                        class="
+                            space-y-4
+                            text-sm
+                            text-slate-400
+                        "
+                    >
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>即時訓練計時：</strong>
+                                Live Activity 功能精準掌握最佳訓練節奏與高效模式。
+                            </span>
+
+                        </li>
+
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>運動後黃金修復：</strong>
+                                無縫同步 Apple Watch 數據，
+                                分析 Zone 1–5 心率，
+                                自動執行動態呼吸引導。
+                            </span>
+
+                        </li>
+
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>臉部 AI 疲勞感知：</strong>
+                                獨家 Face 感測捕捉面部表情密碼
+                                （焦慮、疲憊），解鎖專屬呼吸法。
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- 數位微醺 -->
+                <div
+                    class="
+                        glass-card
+                        rounded-3xl
+                        p-8
+                        space-y-6
+                        transition-all
+                        duration-300
+                    "
+                >
+
+                    <div
+                        class="
+                            w-12
+                            h-12
+                            rounded-2xl
+                            bg-indigo-500/10
+                            border
+                            border-indigo-500/20
+                            flex
+                            items-center
+                            justify-center
+                        "
+                    >
+
+                        <i
+                            data-lucide="moon"
+                            class="
+                                w-6
+                                h-6
+                                text-indigo-400
+                            "
+                        ></i>
+
+                    </div>
+
+
+                    <h3
+                        class="
+                            text-xl
+                            font-bold
+                            text-white
+                        "
+                    >
+                        數位微醺
+                    </h3>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-indigo-400
+                            font-medium
+                        "
+                    >
+                        打破焦慮的大腦關機儀式
+                    </p>
+
+
+                    <ul
+                        class="
+                            space-y-4
+                            text-sm
+                            text-slate-400
+                        "
+                    >
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-indigo-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>Whisky 微醺入睡法：</strong>
+                                科學呼吸法協助身體從高張力狀態逐步轉向放鬆，
+                                享受無負擔數位調酒。
+                            </span>
+
+                        </li>
+
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-indigo-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>36 張夢境牌卡儀式：</strong>
+                                睡前抽取夢境牌，
+                                利用非邏輯靜態畫面打碎焦慮迴路，
+                                為入睡建立專屬儀式感。
+                            </span>
+
+                        </li>
+
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-indigo-400
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>沉浸式 ASMR & Hz 聲學：</strong>
+                                自訂均衡器結合 3D 森林雨聲與深海音效，
+                                建立專屬沉浸式聲音空間。
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- 靈性頻率 -->
+                <div
+                    class="
+                        glass-card
+                        rounded-3xl
+                        p-8
+                        space-y-6
+                        transition-all
+                        duration-300
+                    "
+                >
+
+                    <div
+                        class="
+                            w-12
+                            h-12
+                            rounded-2xl
+                            bg-sky-500/10
+                            border
+                            border-sky-500/20
+                            flex
+                            items-center
+                            justify-center
+                        "
+                    >
+
+                        <i
+                            data-lucide="sparkles"
+                            class="
+                                w-6
+                                h-6
+                                text-sky-300
+                            "
+                        ></i>
+
+                    </div>
+
+
+                    <h3
+                        class="
+                            text-xl
+                            font-bold
+                            text-white
+                        "
+                    >
+                        靈性頻率
+                    </h3>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-sky-300
+                            font-medium
+                        "
+                    >
+                        意識對齊與日常冥想
+                    </p>
+
+
+                    <ul
+                        class="
+                            space-y-4
+                            text-sm
+                            text-slate-400
+                        "
+                    >
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-300
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>朝聖祈禱系統：</strong>
+                                融合古老玄學智慧於演算，
+                                顯化最契合當下狀態的神聖祈禱文。
+                            </span>
+
+                        </li>
+
+
+                        <li
+                            class="
+                                flex
+                                items-start
+                                gap-3
+                            "
+                        >
+
+                            <i
+                                data-lucide="check-circle-2"
+                                class="
+                                    w-5
+                                    h-5
+                                    text-sky-300
+                                    shrink-0
+                                    mt-0.5
+                                "
+                            ></i>
+
+                            <span>
+                                <strong>主題式引導冥想：</strong>
+                                涵蓋減壓、專注與療癒音訊課程，
+                                讓冥想成為每天最期待的自我對話。
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- 專屬場景應用 (Use Cases) -->
-        <section id="scenarios" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900">
-            <div class="text-center space-y-4 mb-16">
-                <h2 class="text-xs uppercase tracking-widest text-sky-400 font-semibold">Live Scenarios</h2>
-                <p class="text-3xl md:text-4xl font-bold text-white">無縫融入你的日常生活場景</p>
+
+        <!-- 使用場景 -->
+        <section
+            id="scenarios"
+            class="
+                py-20
+                px-6
+                max-w-7xl
+                mx-auto
+                border-t
+                border-slate-900
+            "
+        >
+
+            <div
+                class="
+                    text-center
+                    space-y-4
+                    mb-16
+                "
+            >
+
+                <h2
+                    class="
+                        text-xs
+                        uppercase
+                        tracking-widest
+                        text-sky-400
+                        font-semibold
+                    "
+                >
+                    Live Scenarios
+                </h2>
+
+                <p
+                    class="
+                        text-3xl
+                        md:text-4xl
+                        font-bold
+                        text-white
+                    "
+                >
+                    無縫融入你的日常生活場景
+                </p>
+
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+
+            <div
+                class="
+                    grid
+                    grid-cols-1
+                    md:grid-cols-2
+                    gap-8
+                "
+            >
+
                 <!-- 場景 1 -->
-                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl group-hover:bg-sky-500/20 transition-all"></div>
-                    <div class="flex items-center gap-3 text-sky-400 mb-4">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
-                        <span class="text-xs font-semibold tracking-wider">高光時刻前夕</span>
+                <div
+                    class="
+                        glass-card
+                        p-8
+                        rounded-3xl
+                        relative
+                        overflow-hidden
+                        group
+                    "
+                >
+
+                    <div
+                        class="
+                            absolute
+                            -right-10
+                            -bottom-10
+                            w-40
+                            h-40
+                            bg-sky-500/10
+                            rounded-full
+                            blur-2xl
+                            group-hover:bg-sky-500/20
+                            transition-all
+                        "
+                    ></div>
+
+
+                    <div
+                        class="
+                            flex
+                            items-center
+                            gap-3
+                            text-sky-400
+                            mb-4
+                        "
+                    >
+
+                        <i
+                            data-lucide="zap"
+                            class="
+                                w-5
+                                h-5
+                            "
+                        ></i>
+
+                        <span
+                            class="
+                                text-xs
+                                font-semibold
+                                tracking-wider
+                            "
+                        >
+                            高光時刻前夕
+                        </span>
+
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-2">找回薄荷般的絕對專注</h4>
-                    <p class="text-xs text-slate-400 mb-4">適用場景：會議前、面試前、考試前、伴侶見面時</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        當心跳因為緊張或期待而失控，透過動態呼吸引導給大腦吹入如「薄荷般的清爽覺察」。在重要簡報前冷靜思考，或在與重要的人見面前拋開雜念，展現最從容不迫的自己。
+
+
+                    <h4
+                        class="
+                            text-2xl
+                            font-bold
+                            text-white
+                            mb-2
+                        "
+                    >
+                        找回薄荷般的絕對專注
+                    </h4>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-slate-400
+                            mb-4
+                        "
+                    >
+                        適用場景：會議前、面試前、考試前、伴侶見面時
                     </p>
+
+
+                    <p
+                        class="
+                            text-sm
+                            text-slate-300
+                            leading-relaxed
+                        "
+                    >
+                        當心跳因為緊張或期待而失控，
+                        透過動態呼吸引導給大腦吹入如
+                        「薄荷般的清爽覺察」。
+
+                        在重要簡報前冷靜思考，
+                        或在與重要的人見面前拋開雜念，
+                        展現最從容不迫的自己。
+                    </p>
+
                 </div>
+
 
                 <!-- 場景 2 -->
-                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-blue-600/20 transition-all"></div>
-                    <div class="flex items-center gap-3 text-blue-400 mb-4">
-                        <i data-lucide="flame" class="w-5 h-5"></i>
-                        <span class="text-xs font-semibold tracking-wider">極限燃燒過後</span>
+                <div
+                    class="
+                        glass-card
+                        p-8
+                        rounded-3xl
+                        relative
+                        overflow-hidden
+                        group
+                    "
+                >
+
+                    <div
+                        class="
+                            absolute
+                            -right-10
+                            -bottom-10
+                            w-40
+                            h-40
+                            bg-blue-600/10
+                            rounded-full
+                            blur-2xl
+                            group-hover:bg-blue-600/20
+                            transition-all
+                        "
+                    ></div>
+
+
+                    <div
+                        class="
+                            flex
+                            items-center
+                            gap-3
+                            text-blue-400
+                            mb-4
+                        "
+                    >
+
+                        <i
+                            data-lucide="flame"
+                            class="
+                                w-5
+                                h-5
+                            "
+                        ></i>
+
+                        <span
+                            class="
+                                text-xs
+                                font-semibold
+                                tracking-wider
+                            "
+                        >
+                            極限燃燒過後
+                        </span>
+
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-2">進入海潮般的修復節奏</h4>
-                    <p class="text-xs text-slate-400 mb-4">適用場景：健身、騎單車、慢跑、飲酒後、高強度工作後</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        身體暴汗後需要冷卻，大腦過載後需要重啟。系統同步 Apple Watch 精準辨識 Zone 區間，引導「海潮後的節奏」。即便是宿醉後的沉重感，也能促進 Metabolic 恢復，為大腦進行深層大掃除。
+
+
+                    <h4
+                        class="
+                            text-2xl
+                            font-bold
+                            text-white
+                            mb-2
+                        "
+                    >
+                        進入海潮般的修復節奏
+                    </h4>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-slate-400
+                            mb-4
+                        "
+                    >
+                        適用場景：健身、騎單車、慢跑、飲酒後、高強度工作後
                     </p>
+
+
+                    <p
+                        class="
+                            text-sm
+                            text-slate-300
+                            leading-relaxed
+                        "
+                    >
+                        身體暴汗後需要冷卻，大腦過載後需要重啟。
+
+                        系統同步 Apple Watch，
+                        辨識不同心率 Zone 區間，
+                        引導你逐步回到平穩節奏。
+
+                        無論是高強度運動或長時間工作後，
+                        都能為身心留下一段真正的恢復空間。
+                    </p>
+
                 </div>
+
 
                 <!-- 場景 3 -->
-                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all"></div>
-                    <div class="flex items-center gap-3 text-indigo-400 mb-4">
-                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
-                        <span class="text-xs font-semibold tracking-wider">情緒風暴來襲</span>
+                <div
+                    class="
+                        glass-card
+                        p-8
+                        rounded-3xl
+                        relative
+                        overflow-hidden
+                        group
+                    "
+                >
+
+                    <div
+                        class="
+                            absolute
+                            -right-10
+                            -bottom-10
+                            w-40
+                            h-40
+                            bg-indigo-500/10
+                            rounded-full
+                            blur-2xl
+                            group-hover:bg-indigo-500/20
+                            transition-all
+                        "
+                    ></div>
+
+
+                    <div
+                        class="
+                            flex
+                            items-center
+                            gap-3
+                            text-indigo-400
+                            mb-4
+                        "
+                    >
+
+                        <i
+                            data-lucide="shield-alert"
+                            class="
+                                w-5
+                                h-5
+                            "
+                        ></i>
+
+                        <span
+                            class="
+                                text-xs
+                                font-semibold
+                                tracking-wider
+                            "
+                        >
+                            情緒風暴來襲
+                        </span>
+
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-2">秒級啟動「大腦重啟」</h4>
-                    <p class="text-xs text-slate-400 mb-4">適用場景：情緒失控、高壓對峙、思緒混亂</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        獨家 Face 鏡頭掃描技術比你更早察覺面部細微波長。當你即將失去耐性，系統自動調配最適動態呼吸法，硬生生切斷交感神經的戰鬥模式，帶你穿越混亂，體驗「風暴後的寧靜」。
+
+
+                    <h4
+                        class="
+                            text-2xl
+                            font-bold
+                            text-white
+                            mb-2
+                        "
+                    >
+                        秒級啟動「大腦重啟」
+                    </h4>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-slate-400
+                            mb-4
+                        "
+                    >
+                        適用場景：情緒波動、高壓對峙、思緒混亂
                     </p>
+
+
+                    <p
+                        class="
+                            text-sm
+                            text-slate-300
+                            leading-relaxed
+                        "
+                    >
+                        Face 鏡頭掃描分析臉部表情變化，
+                        協助察覺疲憊、緊繃與情緒狀態。
+
+                        系統依據當下狀態提供相對應的動態呼吸引導，
+                        幫助你重新找回節奏與覺察，
+                        穿越混亂後回到更穩定的狀態。
+                    </p>
+
                 </div>
+
 
                 <!-- 場景 4 -->
-                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
-                    <div class="flex items-center gap-3 text-purple-400 mb-4">
-                        <i data-lucide="wine" class="w-5 h-5"></i>
-                        <span class="text-xs font-semibold tracking-wider">夜幕降臨之際</span>
+                <div
+                    class="
+                        glass-card
+                        p-8
+                        rounded-3xl
+                        relative
+                        overflow-hidden
+                        group
+                    "
+                >
+
+                    <div
+                        class="
+                            absolute
+                            -right-10
+                            -bottom-10
+                            w-40
+                            h-40
+                            bg-purple-500/10
+                            rounded-full
+                            blur-2xl
+                            group-hover:bg-purple-500/20
+                            transition-all
+                        "
+                    ></div>
+
+
+                    <div
+                        class="
+                            flex
+                            items-center
+                            gap-3
+                            text-purple-400
+                            mb-4
+                        "
+                    >
+
+                        <i
+                            data-lucide="wine"
+                            class="
+                                w-5
+                                h-5
+                            "
+                        ></i>
+
+                        <span
+                            class="
+                                text-xs
+                                font-semibold
+                                tracking-wider
+                            "
+                        >
+                            夜幕降臨之際
+                        </span>
+
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-2">享用無負擔的「數位酒」</h4>
-                    <p class="text-xs text-slate-400 mb-4">適用場景：入眠氛圍、深層放鬆、休息模式</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        告別無休止的失眠翻覆，體驗「Whisky 微醺儀式」。抽取 3 張解構邏輯的夢境牌打碎思考迴路，搭配 3D Hz 感官音效築起安全結界，讓身體順應自然機制迅速褪去防備，無痛滑入深度睡眠。
+
+
+                    <h4
+                        class="
+                            text-2xl
+                            font-bold
+                            text-white
+                            mb-2
+                        "
+                    >
+                        享用無負擔的「數位酒」
+                    </h4>
+
+
+                    <p
+                        class="
+                            text-xs
+                            text-slate-400
+                            mb-4
+                        "
+                    >
+                        適用場景：入眠氛圍、深層放鬆、休息模式
                     </p>
+
+
+                    <p
+                        class="
+                            text-sm
+                            text-slate-300
+                            leading-relaxed
+                        "
+                    >
+                        體驗「Whisky 微醺儀式」。
+
+                        抽取 3 張解構邏輯的夢境牌，
+                        讓注意力暫時離開日常思緒，
+
+                        搭配沉浸式 3D 聲音與環境音效，
+                        建立屬於自己的夜間放鬆空間，
+                        讓身體慢慢進入休息狀態。
+                    </p>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- CTA Call to Action -->
-        <section id="download" class="py-24 px-6 text-center relative">
-            <div class="max-w-4xl mx-auto glass-card rounded-3xl p-12 border border-sky-500/20 relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-sky-500/10 to-transparent"></div>
-                <div class="relative z-10 space-y-6">
-                    <h3 class="text-3xl md:text-5xl font-bold text-white">準備好掌控你的狀態了嗎？</h3>
-                    <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
-                        每一次的呼吸都是一種享受。立即下載 Peak Formula，讓科學與呼吸帶你跨越臨界點。
+
+        <!-- 品牌收尾 -->
+        <section
+            class="
+                py-24
+                px-6
+                text-center
+                relative
+            "
+        >
+
+            <div
+                class="
+                    max-w-4xl
+                    mx-auto
+                    glass-card
+                    rounded-3xl
+                    p-12
+                    border
+                    border-sky-500/20
+                    relative
+                    overflow-hidden
+                "
+            >
+
+                <div
+                    class="
+                        absolute
+                        inset-0
+                        bg-gradient-to-r
+                        from-blue-600/10
+                        via-sky-500/10
+                        to-transparent
+                    "
+                ></div>
+
+
+                <div
+                    class="
+                        relative
+                        z-10
+                        space-y-6
+                    "
+                >
+
+                    <h3
+                        class="
+                            text-3xl
+                            md:text-5xl
+                            font-bold
+                            text-white
+                        "
+                    >
+                        掌控你的狀態
+                    </h3>
+
+
+                    <p
+                        class="
+                            text-slate-400
+                            max-w-xl
+                            mx-auto
+                            text-sm
+                            md:text-base
+                            leading-relaxed
+                        "
+                    >
+                        每一次的呼吸都是一種享受。
+
+                        Peak Formula
+                        讓呼吸、科技與日常覺察自然融合，
+                        在每一個重要時刻，
+                        找回屬於你的節奏。
                     </p>
-                    <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-                        <button class="px-8 py-4 rounded-full font-bold text-black bg-white hover:bg-slate-200 transition-all shadow-lg flex items-center justify-center gap-3">
-                            <i data-lucide="apple" class="w-5 h-5"></i> App Store 下載
-                        </button>
-                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- 頁尾 Footer -->
-        <footer class="py-12 px-6 border-t border-slate-900 text-center text-xs text-slate-600">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="waves" class="w-4 h-4 text-sky-400"></i>
-                    <span class="text-slate-400 font-semibold tracking-wider">PEAK FORMULA</span>
+
+        <!-- Footer -->
+        <footer
+            class="
+                py-12
+                px-6
+                border-t
+                border-slate-900
+                text-xs
+                text-slate-600
+            "
+        >
+
+            <div
+                class="
+                    max-w-7xl
+                    mx-auto
+                    flex
+                    flex-col
+                    lg:flex-row
+                    justify-between
+                    items-center
+                    gap-6
+                "
+            >
+
+                <!-- Logo -->
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-2
+                    "
+                >
+
+                    <i
+                        data-lucide="waves"
+                        class="
+                            w-4
+                            h-4
+                            text-sky-400
+                        "
+                    ></i>
+
+                    <span
+                        class="
+                            text-slate-400
+                            font-semibold
+                            tracking-wider
+                        "
+                    >
+                        PEAK FORMULA
+                    </span>
+
                 </div>
-                <p>© 2026 Peak Formula Inc. 版權所有。高階身心能量調校系統。</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-slate-400">隱私條款</a>
-                    <a href="#" class="hover:text-slate-400">服務條款</a>
-                    <a href="#" class="hover:text-slate-400">聯繫我們</a>
+
+
+                <!-- Copyright -->
+                <p class="text-center">
+                    © 2026 Peak Formula Inc.
+                    版權所有。高階身心能量調校系統。
+                </p>
+
+
+                <!-- 法律與聯絡資訊 -->
+                <div
+                    class="
+                        flex
+                        flex-wrap
+                        items-center
+                        justify-center
+                        gap-x-6
+                        gap-y-3
+                    "
+                >
+
+                    <a
+                        href="https://paul-750-k.github.io/Privacy-Policy-.md/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="
+                            hover:text-sky-400
+                            transition-colors
+                        "
+                    >
+                        隱私條款
+                    </a>
+
+
+                    <a
+                        href="https://paul-750-k.github.io/Terms-of-Use/#section-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="
+                            hover:text-sky-400
+                            transition-colors
+                        "
+                    >
+                        服務條款
+                    </a>
+
+
+                    <a
+                        href="mailto:xrknight7@yahoo.com"
+                        class="
+                            hover:text-sky-400
+                            transition-colors
+                        "
+                    >
+                        聯繫我們：xrknight7@yahoo.com
+                    </a>
+
                 </div>
+
             </div>
+
         </footer>
 
     </div>
 
-    <!-- 初始化圖標 -->
+
+    <!-- 初始化 Lucide Icon -->
     <script>
         lucide.createIcons();
     </script>
+
 </body>
 </html>
